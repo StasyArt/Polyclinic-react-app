@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Open Sans, sans-serif, Arial;
+    font-weight: normal;
+    font-size: 1em;
+}
+
+:root {
+    --base-font: helvetica;
+    --main-background-color: #aed6ff;
+    --second-background-color: #98ccff;
+    --card-background-color: #CBDFF4;
+    --blue-text-color: #265891;
+    --card-shadow-color: #00000029;
+    --card-text-color: #3d3d3fd4;
+    --card-task-bg-color: #98ccff;
+    --light-color: #fff;
+
+    --columns: 4;
+    --betweenColumns: 15px;
+
+    /*background: url(images/bg.jpg);*/
+}
+
+#main-header{
+	width: 100%;
+	height: 15vh;
+	padding: 10px 30px;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #0060ce;
+}
+
+.header-logo {
+	width: 10%;
+	height: 80px;
+	background: url("../../images/logo.png") no-repeat;
+	background-size: 125px 80px;
+}
+
+.header-name {
+	width:30%;
+    font-size: 20px; 
+    color: rgb(180, 220, 243);
+    padding-left: 10px;
+    border-left: 1px solid rgb(180, 220, 243);
+    font-weight: 100;
+	font: helvetica;
+}
+
+.header-space {
+	width:40%;
+}
+.header-address {
+	width:20%;
+	font-size: 20px;
+	padding-right: 10px;
+	text-align: right;
+    color: rgb(214, 233, 245);
+    font-weight: 100;
+	font: helvetica;
+}
+
+.main-flex {
+	width: 100%;
+	height: 85vh;
+	padding: 20px 40px;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.doctor-box {
+	width: 22%;
+	height: 80vh;
+	padding: 20px 20px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgb(214, 243, 252);
+	border-top: 5px solid #0060ce;
+}
+
+.doctor-photo {
+	width: 236px;
+	height: 236px;
+	background: url("../../images/doctor.jpeg") no-repeat;
+	border-radius: 15px;
+	box-shadow: inset 0 0 20px rgba(255,255,255,1);
+}
+
+.doctor-name {
+	margin-top: 30px;
+	width: 260px;
+    font-size: 30px; 
+	color: #0060ce;
+	text-align: center;
+	font-weight: 400;
+	letter-spacing: 1px;
+	font: helvetica;
+}
+
+.doctor-text {
+	margin-top: 30px;
+	width: 260px;
+    font-size: 20px; 
+	color: #0060ce;
+	text-align: center;
+	font-weight: 100;
+	font: helvetica;
+	font-style: italic;
+}
+
+#main-content-container {
+    width: 75%;
+    height: 80vh;
+    padding: 5px 0;
+}
+
+#main-content {	
+	box-sizing: border-box;
+	display: flex;
+	overflow-x: auto;
+	overflow-y: hidden;
+	align-items: center;
+	background-color: rgb(214, 243, 252);
+    border-top: 5px solid #0060ce;
+    overflow-x: auto;
+}
+
+.element-container {
+    margin-right: 2px;
+    width: 260px;
+    min-width: 260px;
+	height: 78vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.card {
+    border-radius: 20px 0 0 20px;
+    padding: 5px;
+    color: var(--card-text-color);
+    height: 100%;
+    width: 90%;
+    position: relative;
+    overflow-y: scroll;
+    border: 1px solid #0060ce;
+}
+
+.card-header {
+    margin-bottom: 10px;
+    width: auto;
+	height: 10%;
+	display: flex;
+	align-items: center;
+	background-color:  #0060ce;
+    box-sizing: border-box;
+    text-align: center;
+    color: rgb(180, 220, 243);
+    font-size: 20px; 
+    font-weight: 600;
+    border-radius: 20px 20px 5px 5px;
+}
+
+.card-task {
+    border-style: solid;
+	border-width: 1px;
+	border-color: #0060ce;
+    padding: 2px;
+    border-radius: 5px;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    box-sizing: border-box;
+    width: auto;
+    height: 10%;
+}
+
+.card-task:empty {
+    display: none;
+}
+
+.card-task:hover {
+    background-color: #aed6ff;
+    border: #0060ce solid 2px;
+}
+
+.card-task-text {
+    width: 70%;
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.card-task-icons {
+    width: 30%;
+}
+
+.card-task-icons-first-row, .card-task-icons-second-row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.card-task-icon {
+    width: 20px;
+    height: 20px;
+    padding: 1px;
+    min-width: 20px;
+    margin: 2px 0;
+    opacity: 0.75;
+}
+
+.card-task-icon:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.element-container:first-child .card-task-icon-left {
+    display: none;
+}
+
+.element-container:nth-last-child(2) .card-task-icon-right {
+    display: none;
+}
+
+.card-task-icon-edit {
+    background: url("../../assets/edit.svg") center / cover no-repeat;
+}
+
+.card-task-icon-delete {
+    background: url("../../assets/delete-button.svg") center / cover no-repeat;
+}
+
+.card-task-icon.card-task-icon-remove-daylist {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    padding: 1px;
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    background-color:#aed6ff;
+}
+
+.card-task-time {
+    margin-right: 10px;
+    font-weight: bolder;
+    font-size: 16px;
+    letter-spacing: 0.5;
+    letter-spacing: 1px;
+    color: #0060ce;
+}
+
+.card-add-new {
+    padding: 5px;
+    transition: all .25s ease-in-out;
+    opacity: 0.75;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.card-add-new:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.card-add-list-button {
+    font-size: 24px;
+    transition: opacity .25s ease-in-out;
+    opacity: 0.9;
+    outline: none;
+    font-weight: bolder;
+}
+
+.card-create-list-button {
+    font-size: 15px;
+    opacity: 0.9;
+    outline: none;
+    padding: 5px;
+    background: var(--light-color);
+    border-radius: 5px;
+    color: var(--blue-text-color);
+    display: inline-block;
+    margin-top: 5px;
+    box-shadow: var(--card-shadow-color) 2px 2px 4px;
+}
+
+.card-create-list-button:hover {
+    opacity: 0.8;
+}
+
+.card-add-list-container {
+    background-color: rgb(214, 243, 252);
+}
+
+.card-add-list-container:hover {
+    background-color: #aed6ff;
+    cursor: pointer;
+}
+
+.card-add-list-input {
+    background: var(--light-color);
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.card-add-list-input:focus {
+    border: rgba(0, 0, 0, 0.75) solid 1px;
+}
+
